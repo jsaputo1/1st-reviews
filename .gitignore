@@ -9,3 +9,5 @@ node_modules/
 
 plugins/
 languages/
+
+db.php
