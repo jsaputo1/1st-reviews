@@ -6,6 +6,7 @@
   <section class="hero">
     <img src="<?php the_field( 'hero_banner' ); ?>" />
     <h1><?php the_field( 'hero_heading' ); ?></h1>
+    <?php the_field( 'hero_paragraph' ); ?>
   </section>
 </div>
 

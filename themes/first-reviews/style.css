@@ -54,6 +54,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
 #menu-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,6 +79,11 @@ table {
 .hero h1 {
   text-align: center;
   font-size: 2rem; }
+
+.hero p {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 25px; }
 
 body {
   background-color: white;
