@@ -54,9 +54,31 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  background: white;
-  font-size: 2em; }
+#menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 25px; }
+  #menu-nav a {
+    text-decoration: none;
+    color: black; }
+
+.hero img {
+  width: 100%;
+  margin-bottom: 25px; }
+
+.hero h1 {
+  text-align: center;
+  font-size: 2rem; }
 
 body {
-  background-color: pink; }
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; }
+
+.container {
+  width: 1140px;
+  margin: 0 auto; }

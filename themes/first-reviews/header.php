@@ -7,4 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body <?php body_class();?>>
-<h1><?php bloginfo('name');?></h1>
+<header>
+    <nav>
+        <?php wp_nav_menu(array(
+                'theme_location' => 'nav'
+                )) ;?>  
+    </nav>
+</header>
