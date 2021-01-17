@@ -72,6 +72,16 @@ em {
     text-decoration: none;
     color: black; }
 
+.btn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; }
+
 .hero img {
   width: 100%;
   margin-bottom: 25px; }
@@ -84,6 +94,93 @@ em {
   width: 75%;
   margin: 0 auto;
   padding-top: 25px; }
+
+.featured-container {
+  background-color: silver;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.featured-image {
+  width: 50%;
+  position: relative; }
+  .featured-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .featured-image .text {
+    position: absolute;
+    bottom: 10%;
+    left: 23%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .featured-image .text i {
+      color: gold;
+      font-size: 2.5rem;
+      margin-bottom: 10px; }
+    .featured-image .text h3 {
+      color: white;
+      text-transform: uppercase;
+      margin: 5px 0px;
+      font-weight: bold; }
+
+.featured-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 0px 20px 30px; }
+  .featured-text h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px; }
+  .featured-text .rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .featured-text h4 {
+    margin: 10px 0; }
+  .featured-text .btn {
+    width: 100px; }
+
+.featured-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 body {
   background-color: white;
