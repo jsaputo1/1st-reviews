@@ -15,7 +15,6 @@ Text Domain: first-reviews
 @import 'base/reset';
 @import 'base/typography';
 
-@import 'layout/navigation';
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
@@ -34,3 +33,5 @@ Text Domain: first-reviews
 
 @import 'themes/theme';
 @import 'themes/admin';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');

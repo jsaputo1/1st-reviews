@@ -20,4 +20,12 @@ function first_reviews_features() {
 
 add_action('after_setup_theme', 'first_reviews_features');
 
+// Relative date & time
+function wpse_relative_date() {
+    
+    return human_time_diff( get_the_time('U'), current_time( 'timestamp' ) ) . ' ago';
+    }
+  add_filter( 'get_the_date', 'wpse_relative_date' ); // for posts and pages
+  // add_filter( 'get_comment_date', 'wpse_relative_date' ); // for comments
+
 ?>
