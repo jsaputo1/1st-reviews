@@ -11,6 +11,7 @@ Text Domain: first-reviews
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,17 +61,59 @@ strong {
 em {
   font-style: italic; }
 
-#menu-nav {
+nav {
+  background-color: black;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 25px; }
-  #menu-nav a {
-    text-decoration: none;
-    color: black; }
+  padding: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  nav a {
+    color: white;
+    text-decoration: none; }
+    nav a:hover {
+      opacity: 0.8; }
+  nav .menu-nav-container {
+    width: 75%; }
+  nav #menu-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly; }
+  nav .contact-info {
+    width: 25%;
+    padding-left: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    nav .contact-info i {
+      padding-right: 25px; }
+      nav .contact-info i:hover {
+        color: gold; }
+  nav .search-input {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'FontAwesome', 'Open Sans', sans-serif; }
+  nav .current-menu-item a {
+    color: gold; }
 
 .btn {
   background-color: black;
@@ -225,7 +268,7 @@ em {
 
 body {
   background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px; }
 
 .container {
