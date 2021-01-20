@@ -50,40 +50,41 @@
     <?php endif; ?>
   </section>
   <div class="container">
-    <section class="latest-reviews">
-      <h1>Latest</h1>
-    <?php
-        $args = array( 
-            'post_type' => 'post', 
-            'order' => 'ASC',
-            'cat' => '7'
-            );
-        $review_posts = get_posts( $args ); 
-    ?>
-    <?php foreach ( $review_posts as $post ) : setup_postdata( $post ); ?> 
-    <div class="post-container">
-      <div class="thumbnail">
-        <img src="<?php echo get_the_post_thumbnail_url();?>">
+    <div class="main-split">
+      <section class="latest-reviews">
+        <h1 class="main-title">Latest</h1>
+      <?php
+          $args = array( 
+              'post_type' => 'post', 
+              'order' => 'ASC',
+              'cat' => '7'
+              );
+          $review_posts = get_posts( $args ); 
+      ?>
+      <?php foreach ( $review_posts as $post ) : setup_postdata( $post ); ?> 
+      <div class="post-container">
+        <div class="thumbnail">
+          <img src="<?php echo get_the_post_thumbnail_url();?>">
+        </div>
+        <div class="post-text">
+          <h1><?php echo the_title(); ?></h1>
+          <h5><?php echo the_field( 'rating' ); ?></h5>
+          <p>
+          <?php echo wp_trim_words( get_the_content(), 40, '...' ) ?>
+          <span> <a href="<?php echo get_the_permalink() ?>">Read More</a></span>
+          </p>
+          <h4><em><?php echo get_the_author() ?></em>
+          <span> <?php echo get_the_date(); ?></span></h4>
+        </div>
       </div>
-      <div class="post-text">
-        <h1><?php echo the_title(); ?></h1>
-        <h5><?php echo the_field( 'rating' ); ?></h5>
-        <p>
-        <?php echo wp_trim_words( get_the_content(), 40, '...' ) ?>
-        <span> <a href="<?php echo get_the_permalink() ?>">Read More</a></span>
-        </p>
-        <h4><em><?php echo get_the_author() ?></em>
-        <span> <?php echo get_the_date(); ?></span></h4>
+      <hr>
+
+      <?php endforeach; wp_reset_postdata(); ?>
+      </section>
+      <section class="sidebar">
+        <?php get_sidebar();?>
       </div>
     </div>
-    <hr>
-
-
-
-
-    <?php endforeach; wp_reset_postdata(); ?>
-    </section>
-
   </div>
 
 <!-- Footer -->
