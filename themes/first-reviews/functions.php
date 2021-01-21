@@ -2,9 +2,13 @@
 
 //Adds script and stylesheets
 function first_reviews_files() {
+    wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', NULL, microtime());
     wp_enqueue_style('first_reviews_styles', get_stylesheet_uri('/build/css/style.min.css'), NULL, microtime());
     wp_enqueue_style('fonts', "https://fonts.googleapis.com/css?family=Lato&display=swap");
-    wp_enqueue_script('load-fa', 'https://kit.fontawesome.com/e785bdc78c.js');
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js');
+    wp_enqueue_script('bootstrap', 'https://kit.fontawesome.com/e785bdc78c.js');
+    wp_enqueue_script('load-fa', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js');
 }
 
 add_action('wp_enqueue_scripts', 'first_reviews_files');
