@@ -14,10 +14,8 @@
       ?>
       <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>  
       <div class="featured-container row">
-        <div class="featured-image col"       
-          style="background-image: linear-gradient(180deg,rgba(16,16,16,0) 0,#101010),
-        url(<?php echo get_the_post_thumbnail_url();?>)"        
-        >
+        <div class="featured-image col">
+          <img src="<?php echo get_the_post_thumbnail_url();?>">
           <div class="black-block"></div>
           <div class="text">
             <h3><?php echo the_field( 'movie_title' ); ?>

@@ -5,6 +5,9 @@ nav {
   justify-content: space-evenly;
   padding: 15px;
   align-items: center;
+  @include lg {
+    flex-direction: column;
+  }
   a {
     color: white;
     text-decoration: none;

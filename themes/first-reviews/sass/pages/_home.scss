@@ -13,9 +13,11 @@
 
   .col-6 {
     @include lg {
-      max-width: 80%;
+      max-width: 100%;
     }
   }
+
+
 
   .col {
     padding: 0px;
@@ -25,25 +27,32 @@
 .featured-image {
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-position: center;
   background-size: cover;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 
   .black-block {
     background-color: black;
     padding-top: 50px;
   }
   .text {
+    width: 100%;
     position: absolute;
     bottom: 25px;
     display: flex;
-    justify-content: space-between;
-    width: calc(100% - 30px);
+    flex-direction: column;
     align-items: center;
+    text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
+    z-index: 1;
 
-    h5 {
-      padding-right: 50px;
-    }
+    // h5 {
+    //   padding-right: 50px;
+    // }
 
     i {
       color: gold;
@@ -55,10 +64,21 @@
       color: white;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 2rem;
-      padding-left: 50px;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
     }
   }
+}
+
+.featured-image::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(180deg, rgba(16, 16, 16, 0) 0, #101010);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: '';
 }
 
 .featured-text {
@@ -71,12 +91,18 @@
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 15px;
+    @include lg {
+      display: none;
+    }
   }
 
   .rating {
     display: flex;
     justify-content: center;
     color: gold;
+    @include lg {
+      display: none;
+    }
   }
 
   .btn {
@@ -131,6 +157,11 @@
   .post-container {
     display: flex;
     margin: 30px 0px;
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
   }
 
   .thumbnail {
@@ -147,10 +178,13 @@
   .post-text {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    max-width: 600px;
     padding-left: 20px;
     padding-right: 50px;
     justify-content: flex-start;
+    @include lg {
+      padding: 0 15px;
+    }
     i {
       color: gold;
     }
@@ -159,6 +193,10 @@
       font-weight: bold;
       font-size: 1.7rem;
       padding-bottom: 5px;
+      @include lg {
+        margin: 10px 0px;
+        font-size: 1.5rem;
+      }
     }
     p {
       font-weight: 300;
@@ -181,6 +219,9 @@
   display: flex;
   &:nth-child(1) {
     width: 80%;
+    @include lg {
+      width: 100%;
+    }
   }
   &:nth-child(2) {
     width: 20%;
