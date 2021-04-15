@@ -12,3 +12,5 @@ languages/
 
 db.php
 uploads/
+themes/first-reviews/build/css/style.min.css
+themes/first-reviews/build/maps/style.min.css.map
