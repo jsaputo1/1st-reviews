@@ -1,0 +1,21 @@
+body {
+  background-color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+// Typography
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}

@@ -1,0 +1,23 @@
+
+.page-template-default {
+
+  .main-split {
+    width: 100%;
+    display: flex;
+  }
+
+  .site-main {
+    padding-left: unset;
+    padding-right: unset;
+    
+  }
+  .sidebar {
+    padding-left: unset;
+    padding-right: unset;
+    
+  }
+}
+
+.main-title {
+  margin: 30px 0;
+}
