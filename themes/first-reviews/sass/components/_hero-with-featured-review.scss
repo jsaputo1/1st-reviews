@@ -7,10 +7,9 @@
     padding: 0 50px 0 0;
   }
   
-
-  h1 {
+  pre, h1 {
     color: white;
-    font-size: 1rem;
+    font-size: 10rem;
   }
 
   .featured-image {
@@ -56,6 +55,10 @@
 
   .featured-text {
 
+    @include media-breakpoint-down(lg) {
+      padding-top: 50px;
+    }
+
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -96,6 +99,8 @@
     justify-content: flex-end;
     margin-top: 20px;
     font-size: 0.9rem;
+    color: $whiteText;
+    width: 100%;
 
     h3 {
       color: $whiteText;
@@ -103,6 +108,7 @@
 
     a {
       color: $gold;
+      padding-right: 10px;
       &:visited {
         color: $gold;
       }

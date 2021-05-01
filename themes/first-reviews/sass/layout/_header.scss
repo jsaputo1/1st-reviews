@@ -2,9 +2,9 @@ nav {
   background-color: black;
   color: white;
   display: flex;
-    list-style: none;
+  list-style: none;
   justify-content: space-evenly;
-  padding: 15px;
+  padding: 10px;
   align-items: center;
 
   a {
@@ -12,6 +12,8 @@ nav {
     text-decoration: none;
     &:hover {
       opacity: 0.8;
+      color: $gold;
+      text-decoration: none;
     }
   }
   .menu-nav-container {
@@ -21,6 +23,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    margin: 0;
   }
   .contact-info {
     width: 25%;

@@ -24,8 +24,12 @@ if( $featured_post ): ?>
             <span class="rating"><?php echo get_field( 'rating', $post->ID ); ?></span>
           <p><?php echo wp_trim_words( get_the_content(), 90, '...' ) ?><span><a href="<?php echo get_the_permalink() ?>" class="trunc-link">Read More</a></span></p>
           <div class="footer">
-            <h4><em><?php the_author_link() ?></em>
-            <span> <?php echo get_the_date(); ?></span></h4>
+            <?php
+              $author = get_the_author_meta('display_name', 1); 
+              $authorURL = get_author_posts_url($post->post_author);
+            ?>
+            <em><a href="<?php echo $authorURL; ?>"><?php echo $author ?></a></em>
+            <span> <?php echo get_the_date(); ?></span>
           </div>
         </div>
       <?php endforeach; ; ?>
