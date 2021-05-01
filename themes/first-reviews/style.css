@@ -8323,7 +8323,7 @@ body {
   background-color: white;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 16px;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 .container {
   max-width: 1300px;
@@ -8341,6 +8341,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -8348,12 +8349,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media (min-width: 992px) {
-    nav {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   nav a {
     color: white;
     text-decoration: none; }
@@ -8367,7 +8362,8 @@ nav {
     display: flex;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
-            justify-content: space-evenly; }
+            justify-content: space-evenly;
+    list-style: none; }
   nav .contact-info {
     width: 25%;
     padding-left: 30px;
@@ -8403,15 +8399,105 @@ nav {
   .sidebar {
     display: none; } }
 
-.btn {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px; }
+.hero-with-featured-review {
+  background-color: #1d1d1d; }
+  @media (min-width: 992px) {
+    .hero-with-featured-review {
+      padding: 0 50px 0 0; } }
+  .hero-with-featured-review h1 {
+    color: white;
+    font-size: 1rem; }
+  .hero-with-featured-review .featured-image img {
+    width: 100%;
+    height: auto;
+    max-height: 325px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .hero-with-featured-review .featured-image:after {
+    content: '';
+    display: block;
+    background-color: black;
+    padding-top: 50px;
+    margin-top: -2px; }
+  .hero-with-featured-review .featured-image .text {
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
+    z-index: 1; }
+    .hero-with-featured-review .featured-image .text h3 {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px; }
+    .hero-with-featured-review .featured-image .text i {
+      color: gold;
+      font-size: 2rem;
+      margin-bottom: 10px; }
+  .hero-with-featured-review .featured-text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .hero-with-featured-review .featured-text h2 {
+      color: #ffffff;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 15px; }
+    .hero-with-featured-review .featured-text .rating {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      color: gold;
+      margin-bottom: 15px; }
+    .hero-with-featured-review .featured-text p {
+      color: #ffffff;
+      line-height: 1.5;
+      word-spacing: 2px;
+      padding: 0px 15px; }
+    .hero-with-featured-review .featured-text span a {
+      color: gold;
+      text-decoration: none; }
+  .hero-with-featured-review .footer {
+    padding-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 0.9rem; }
+    .hero-with-featured-review .footer h3 {
+      color: #ffffff; }
+    .hero-with-featured-review .footer a {
+      color: gold; }
+      .hero-with-featured-review .footer a:visited {
+        color: gold; }
 
 .page-template-default .main-split {
   width: 100%;

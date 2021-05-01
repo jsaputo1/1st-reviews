@@ -1,5 +1,113 @@
 
 .hero-with-featured-review {
 
+  background-color: $darkGrey;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 50px 0 0;
+  }
+  
+
+  h1 {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .featured-image {
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 325px;
+      object-fit: cover;
+    }
+    &:after {
+      content: '';
+      display: block;
+      background-color: black;
+      padding-top: 50px;
+      margin-top: -2px;
+    }
+    .text {
+      width: 100%;
+      position: absolute;
+      bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
+      z-index: 1;
+      
+      h3 {
+        color: $whiteText;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+
+      i {
+        color: gold;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .featured-text {
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: $whiteText;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      color: $gold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $whiteText;
+      line-height: 1.5;
+      word-spacing: 2px;
+      padding: 0px 15px;
+    }
+
+    span {
+      a {
+        color: $gold;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .footer {
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 0.9rem;
+
+    h3 {
+      color: $whiteText;
+    }
+
+    a {
+      color: $gold;
+      &:visited {
+        color: $gold;
+      }
+    }
+  }
+
   
 }

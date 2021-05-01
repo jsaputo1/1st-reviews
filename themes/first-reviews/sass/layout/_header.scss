@@ -2,12 +2,11 @@ nav {
   background-color: black;
   color: white;
   display: flex;
+    list-style: none;
   justify-content: space-evenly;
   padding: 15px;
   align-items: center;
-  @include media-breakpoint-up(lg) {
-    flex-direction: column;
-  }
+
   a {
     color: white;
     text-decoration: none;
@@ -21,6 +20,7 @@ nav {
   #menu-nav {
     display: flex;
     justify-content: space-evenly;
+    list-style: none;
   }
   .contact-info {
     width: 25%;
