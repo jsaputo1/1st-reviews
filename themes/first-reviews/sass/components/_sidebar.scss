@@ -6,4 +6,7 @@
   @include media-breakpoint-down (lg) {
     display: none;
   }
+  .main-title {
+    margin: 30px 0;
+  }
 }

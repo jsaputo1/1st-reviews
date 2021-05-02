@@ -23,6 +23,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_608edf2377dfb",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_607796c57644e",
                             "label": "Featured Review",
                             "name": "featured_post",
@@ -56,32 +75,21 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_608edf3777dfc": {
+                    "key": "layout_608edf3777dfc",
+                    "name": "sidebar",
+                    "label": "Sidebar",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_608ca9b748193": {
                     "key": "layout_608ca9b748193",
-                    "name": "test-component",
-                    "label": "test component",
+                    "name": "latest_reviews",
+                    "label": "Latest Reviews",
                     "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_608ca9c348194",
-                            "label": "Title",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
+                    "sub_fields": [],
                     "min": "",
                     "max": ""
                 }
@@ -108,5 +116,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619889580
+    "modified": 1619975998
 }
