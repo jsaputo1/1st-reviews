@@ -4,8 +4,8 @@
 */
 ?> 
  
-<aside class="sidebar">
-  <h2 class="main-title">Genre</h1>
+<aside class="sidebar col-2">
+  <h2 class="title">Genre</h1>
   <?php
     $args = array( 
         'post_type' => 'post', 
@@ -20,8 +20,8 @@
       // $genreLink = strtolower($value) 
         foreach ( $value as $genreName ) : 
         ?>
-          <li><a href="<?php echo get_home_url(); ?>/tag/<?php echo strtolower( $genreName ); ?>"></a>
-          <?php echo $genreName; ?></li>
+          <li><a href="<?php echo get_home_url(); ?>/tag/<?php echo strtolower( $genreName ); ?>">
+          <?php echo $genreName; ?></li></a>
         <?php endforeach; ?>
     <?php endforeach; wp_reset_postdata(); ?>
   </ul>
