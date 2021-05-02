@@ -8599,8 +8599,21 @@ footer {
       color: #000000; }
       .latest-reviews .post-wrapper .text h2 a:hover {
         text-decoration: underline; }
-    .latest-reviews .post-wrapper .text .rating {
-      color: gold; }
+    .latest-reviews .post-wrapper .text .subtitle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .latest-reviews .post-wrapper .text .subtitle i {
+        color: gold; }
+      .latest-reviews .post-wrapper .text .subtitle a {
+        color: #9d9d9d;
+        font-size: 16px;
+        font-style: italic; }
     .latest-reviews .post-wrapper .text p {
       font-weight: 300;
       font-size: 0.95rem;
