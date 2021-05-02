@@ -29,12 +29,16 @@ function wpse_relative_date() {
     
     return human_time_diff( get_the_time('U'), current_time( 'timestamp' ) ) . ' ago';
     }
-  add_filter( 'get_the_date', 'wpse_relative_date' ); // for posts and pages
-  // add_filter( 'get_comment_date', 'wpse_relative_date' ); // for comments
+add_filter( 'get_the_date', 'wpse_relative_date' ); // for posts and pages
+// add_filter( 'get_comment_date', 'wpse_relative_date' ); // for comments
 
-  if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page('Social Icons');
+
+//Theme Options
+if( function_exists('acf_add_options_page') ) {
+
+acf_add_options_page('Social Icons');
+acf_add_options_page('Footer');
+
 	
 }
 
