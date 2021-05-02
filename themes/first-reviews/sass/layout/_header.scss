@@ -1,34 +1,50 @@
-nav {
-  background-color: $black;
-  color: $whiteText;
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-  padding: 10px;
-  align-items: center;
-
-  a {
+header {
+  .navbar-dark {
+    background-color: $black;
     color: $whiteText;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    &:hover {
-      opacity: 0.8;
-      color: $gold;
-      text-decoration: none;
-    }
-  }
-  .menu-nav-container {
-    width: 75%;
-  }
-  #menu-nav {
     display: flex;
-    justify-content: space-evenly;
     list-style: none;
-    margin: 0;
+    justify-content: space-evenly;
+    padding: 5px;
+    align-items: center;
+
+    a {
+      color: $whiteText;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      &:hover {
+        opacity: 0.8;
+        color: $gold;
+        text-decoration: none;
+      }
+    }
+    .navbar-nav {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      margin: 0;
+      width: 100%;
+      .nav-link {
+        color: $whiteText;
+      }
+      .current-menu-item {
+        .nav-link {
+          color: $gold;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      padding-left: 25px;
+    }
+
   }
   .contact-info {
-    width: 25%;
+    @include media-breakpoint-up(md) {
+      width: 25%;
+    }
+    
     padding-left: 30px;
     display: flex;
     justify-content: flex-end;
@@ -37,6 +53,12 @@ nav {
       &:hover {
         color: $gold;
       }
+    }
+  }
+
+  form {
+    @include media-breakpoint-down(md) {
+      display: none;
     }
   }
   .search-input {
@@ -51,9 +73,5 @@ nav {
     text-align: center;
     font-family: 'FontAwesome', 'Open Sans', sans-serif;
   }
-  .current-menu-item {
-    a {
-      color: $gold;
-    }
-  }
 }
+

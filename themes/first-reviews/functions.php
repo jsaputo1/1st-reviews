@@ -5,10 +5,10 @@ function first_reviews_files() {
     wp_enqueue_style('first_reviews_styles', get_stylesheet_uri('/build/css/style.min.css'), NULL, microtime());
     wp_enqueue_style('fonts', "https://fonts.googleapis.com/css?family=Lato&display=swap");
     wp_enqueue_style('fonts', "https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-    wp_enqueue_script('jquery');
+    // wp_enqueue_script('jquery');
     wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js');
     wp_enqueue_script('load-fa', 'https://kit.fontawesome.com/e785bdc78c.js');
-    wp_enqueue_script('boostrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js');
+    wp_enqueue_script('boostrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('jquery'), '20210502', true );
 }
 
 add_action('wp_enqueue_scripts', 'first_reviews_files');
@@ -18,7 +18,7 @@ function first_reviews_features() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     register_nav_menus (array(
-        'nav' => 'Nav',
+        'primary' => 'Primary Menu',
     ));
 }
 
@@ -58,5 +58,13 @@ function first_reviews_render_flexible_content() {
     endwhile;
     
     }
+
+/** 
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 ?>
