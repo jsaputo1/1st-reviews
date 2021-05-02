@@ -18,10 +18,11 @@ Text Domain: first-reviews
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/sidebar';
 @import 'layout/forms';
 
 @import 'components/hero-with-featured-review';
+@import 'components/latest-reviews';
+@import 'components/sidebar';
 
 @import 'templates/default-template';
 
