@@ -5,7 +5,7 @@
 ?> 
  
  <section class="latest-reviews col-lg-10">
-    <h2 class="title">Latest</h2>
+    <h2 class="title">Latest Reviews</h2>
     <?php
         $args = array( 
             'post_type' => 'post', 
