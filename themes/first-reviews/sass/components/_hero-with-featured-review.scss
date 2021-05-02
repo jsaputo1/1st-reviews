@@ -7,12 +7,21 @@
     padding: 0 50px 0 0;
   }
   
-  pre, h1 {
-    color: white;
-    font-size: 10rem;
+   h1 {
+    display: flex;
+    justify-content: center;
+    color: $whiteText;
+    font-size: 2rem;
+    padding: 20px 0;
+    width: 100%;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
 
   .featured-image {
+    padding-left: 0;
     img {
       width: 100%;
       height: auto;
@@ -64,10 +73,16 @@
     flex-direction: column;
     align-items: center;
 
-    h2 {
-      color: $whiteText;
-      font-size: 1.3rem;
-      font-weight: bold;
+    h2  {
+      a {
+        color: $whiteText;
+        font-size: 1.3rem;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+          color: $gold;
+        }
+      }
       margin-bottom: 15px;
     }
 
@@ -88,7 +103,9 @@
     span {
       a {
         color: $gold;
-        text-decoration: none;
+          &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

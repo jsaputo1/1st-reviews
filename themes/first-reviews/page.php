@@ -15,42 +15,35 @@
 get_header();
 ?>
 
+<div class="container">
+    <main id="primary" class="site-main">
+        <?php
+            // ID of the current item in the WordPress Loop
+            $id = get_the_ID();
 
-<main id="primary" class="site-main col-12">
+            // check if the flexible content field has rows of data
+            if ( have_rows( 'components', $id ) ) :
 
-<?php
-// ID of the current item in the WordPress Loop
-$id = get_the_ID();
+            ?>
+        <?php
 
-// check if the flexible content field has rows of data
-if ( have_rows( 'components', $id ) ) :
+        // loop through the selected ACF layouts and display the matching partial
+        while ( have_rows( 'components', $id ) ) : the_row();
 
-    ?>
+            get_template_part( 'inc/acf-components/' . get_row_layout() );
 
-    <?php
+        endwhile;
 
-    // loop through the selected ACF layouts and display the matching partial
-    while ( have_rows( 'components', $id ) ) : the_row();
+        elseif ( get_the_content() ) :
 
-        get_template_part( 'inc/acf-components/' . get_row_layout() );
-
-    endwhile;
-
-elseif ( get_the_content() ) :
-
-    ?>
-
-
-    <h1>no layouts found</h1>
-
-    <?php
-endif;
-?>
-
-</main><!-- #main -->
-
+        ?>
+            <h1>no layouts found</h1>
+        <?php
+        endif;
+        ?>
+    </main><!-- #main -->
+</div>
 
 <?php
-
 get_footer();
 

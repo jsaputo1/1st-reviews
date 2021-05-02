@@ -8323,11 +8323,17 @@ body {
   background-color: white;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 16px;
+  letter-spacing: 0.3px;
   overflow-x: hidden; }
 
 .container {
   max-width: 1300px;
   margin: 0 auto; }
+
+.span-page {
+  width: 100vw;
+  margin-left: calc((100% - 100vw) / 2);
+  margin-right: calc((100% - 100vw) / 2); }
 
 strong {
   font-weight: 700; }
@@ -8345,15 +8351,19 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 15px;
+  padding: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
   nav a {
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px; }
     nav a:hover {
-      opacity: 0.8; }
+      opacity: 0.8;
+      color: gold;
+      text-decoration: none; }
   nav .menu-nav-container {
     width: 75%; }
   nav #menu-nav {
@@ -8363,7 +8373,8 @@ nav {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    list-style: none; }
+    list-style: none;
+    margin: 0; }
   nav .contact-info {
     width: 25%;
     padding-left: 30px;
@@ -8391,61 +8402,67 @@ nav {
   nav .current-menu-item a {
     color: gold; }
 
-.sidebar a {
-  color: black;
-  text-decoration: none; }
-
-@media (max-width: 1199.98px) {
-  .sidebar {
-    display: none; } }
-
 .hero-with-featured-review {
   background-color: #1d1d1d; }
   @media (min-width: 992px) {
     .hero-with-featured-review {
       padding: 0 50px 0 0; } }
   .hero-with-featured-review h1 {
-    color: white;
-    font-size: 1rem; }
-  .hero-with-featured-review .featured-image img {
-    width: 100%;
-    height: auto;
-    max-height: 325px;
-    -o-object-fit: cover;
-       object-fit: cover; }
-  .hero-with-featured-review .featured-image:after {
-    content: '';
-    display: block;
-    background-color: black;
-    padding-top: 50px;
-    margin-top: -2px; }
-  .hero-with-featured-review .featured-image .text {
-    width: 100%;
-    position: absolute;
-    bottom: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
-    z-index: 1; }
-    .hero-with-featured-review .featured-image .text h3 {
-      color: #ffffff;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 3rem;
-      letter-spacing: 1px;
-      margin-bottom: 5px; }
-    .hero-with-featured-review .featured-image .text i {
-      color: gold;
-      font-size: 2rem;
-      margin-bottom: 10px; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 20px 0;
+    width: 100%;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; }
+  .hero-with-featured-review .featured-image {
+    padding-left: 0; }
+    .hero-with-featured-review .featured-image img {
+      width: 100%;
+      height: auto;
+      max-height: 325px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    .hero-with-featured-review .featured-image:after {
+      content: '';
+      display: block;
+      background-color: black;
+      padding-top: 50px;
+      margin-top: -2px; }
+    .hero-with-featured-review .featured-image .text {
+      width: 100%;
+      position: absolute;
+      bottom: 25px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
+      z-index: 1; }
+      .hero-with-featured-review .featured-image .text h3 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        margin-bottom: 5px; }
+      .hero-with-featured-review .featured-image .text i {
+        color: gold;
+        font-size: 2rem;
+        margin-bottom: 10px; }
   .hero-with-featured-review .featured-text {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -8460,11 +8477,18 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 1199.98px) {
+      .hero-with-featured-review .featured-text {
+        padding-top: 50px; } }
     .hero-with-featured-review .featured-text h2 {
-      color: #ffffff;
-      font-size: 1.3rem;
-      font-weight: bold;
       margin-bottom: 15px; }
+      .hero-with-featured-review .featured-text h2 a {
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: bold; }
+        .hero-with-featured-review .featured-text h2 a:hover {
+          text-decoration: underline;
+          color: gold; }
     .hero-with-featured-review .featured-text .rating {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -8480,8 +8504,9 @@ nav {
       word-spacing: 2px;
       padding: 0px 15px; }
     .hero-with-featured-review .featured-text span a {
-      color: gold;
-      text-decoration: none; }
+      color: gold; }
+      .hero-with-featured-review .featured-text span a:hover {
+        text-decoration: underline; }
   .hero-with-featured-review .footer {
     padding-right: 30px;
     display: -webkit-box;
@@ -8491,19 +8516,97 @@ nav {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-top: 20px;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    color: #ffffff;
+    width: 100%; }
     .hero-with-featured-review .footer h3 {
       color: #ffffff; }
     .hero-with-featured-review .footer a {
-      color: gold; }
+      color: gold;
+      padding-right: 10px; }
       .hero-with-featured-review .footer a:visited {
         color: gold; }
 
-.page-template-default .main-split {
-  width: 100%;
+.latest-reviews .title {
+  font-size: 1.5rem;
+  margin: 30px 0;
+  font-weight: bold;
+  font-style: italic; }
+  .latest-reviews .title:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin-top: .5rem;
+    background: gold; }
+
+.latest-reviews .post-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .latest-reviews .post-wrapper .thumbnail img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .latest-reviews .post-wrapper .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 20px;
+    padding-right: 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .latest-reviews .post-wrapper .text h2 a {
+      font-weight: bold;
+      font-size: 1.7rem;
+      color: #000000; }
+      .latest-reviews .post-wrapper .text h2 a:hover {
+        text-decoration: underline; }
+    .latest-reviews .post-wrapper .text .rating {
+      color: gold; }
+    .latest-reviews .post-wrapper .text p {
+      font-weight: 300;
+      font-size: 0.95rem;
+      margin: 10px 0; }
+      .latest-reviews .post-wrapper .text p span a {
+        color: #000000;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase; }
+    .latest-reviews .post-wrapper .text h4 {
+      color: #9d9d9d;
+      font-weight: 400;
+      font-size: 13px;
+      text-transform: uppercase; }
+      .latest-reviews .post-wrapper .text h4 span {
+        margin-right: 0.25rem; }
+
+.latest-reviews hr {
+  opacity: 0.7; }
+
+.sidebar a {
+  color: black;
+  text-decoration: none; }
+
+@media (max-width: 1199.98px) {
+  .sidebar {
+    display: none; } }
+
+.sidebar .main-title {
+  margin: 30px 0; }
+
+.page-template-default .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .page-template-default .site-main {
   padding-left: unset;
@@ -8512,6 +8615,3 @@ nav {
 .page-template-default .sidebar {
   padding-left: unset;
   padding-right: unset; }
-
-.main-title {
-  margin: 30px 0; }
