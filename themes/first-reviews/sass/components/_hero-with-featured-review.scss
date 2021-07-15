@@ -2,9 +2,10 @@
 .hero-with-featured-review {
 
   background-color: $darkGrey;
+  max-width: 1920px;
 
   @include media-breakpoint-up(lg) {
-    padding: 0 50px 0 0;
+    padding: 0;
   }
   
    h1 {
@@ -18,23 +19,49 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    margin: 0;
+
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.3rem;
+      text-align: center;
+
+    }
   }
 
   .featured-image {
-    padding-left: 0;
-    padding-right: 0;
+    // @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    // }
+
     img {
       width: 100%;
       height: auto;
       max-height: 325px;
       object-fit: cover;
     }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 25%;
+      background-color: rgba(16,16,16,0);
+      background: linear-gradient(0deg,rgba(16,16,16,0) 0,#101010);
+      z-index: 1;
+    }
     &:after {
       content: '';
-      display: block;
-      background-color: black;
-      padding-top: 50px;
-      margin-top: -2px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgba(16,16,16,0);
+      background: linear-gradient(180deg,rgba(16,16,16,0) 0,#101010);
+      z-index: 1;
     }
     .text {
       width: 100%;
@@ -44,15 +71,18 @@
       flex-direction: column;
       align-items: center;
       text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
-      z-index: 1;
+      z-index: 2;
       
-      h3 {
+      a {
         color: $whiteText;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 3rem;
         letter-spacing: 1px;
         margin-bottom: 5px;
+        @include media-breakpoint-down(md) {
+          font-size: 32px;
+        }
       }
 
       i {

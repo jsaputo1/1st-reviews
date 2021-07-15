@@ -1,0 +1,136 @@
+{
+    "key": "group_60046ca8466f0",
+    "title": "Review Post",
+    "fields": [
+        {
+            "key": "field_60071bc659f64",
+            "label": "Title",
+            "name": "movie_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60046caeb9822",
+            "label": "Rating",
+            "name": "rating",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "<i class=\"fas fa-star\"><\/i>": "1",
+                "<i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i>": "2",
+                "<i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i>": "3",
+                "<i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i>": "4",
+                "<i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i><i class=\"fas fa-star\"><\/i>": "5"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60046e6c6586a",
+            "label": "Genre",
+            "name": "genre",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Action": "Action",
+                "Adventure": "Adventure",
+                "Animation": "Animation",
+                "Biography": "Biography",
+                "Comedy": "Comedy",
+                "Crime": "Crime",
+                "Documentary": "Documentary",
+                "Drama": "Drama",
+                "Family": "Family",
+                "Fantasy": "Fantasy",
+                "Film Noir": "Film Noir",
+                "History": "History",
+                "Horror": "Horror",
+                "Music": "Music",
+                "Musical": "Musical",
+                "Mystery": "Mystery",
+                "Romance": "Romance",
+                "Sci-Fi": "Sci-Fi",
+                "Short": "Short",
+                "Sport": "Sport",
+                "Superhero": "Superhero",
+                "Thriller": "Thriller",
+                "War": "War",
+                "Western": "Western"
+            },
+            "allow_custom": 1,
+            "save_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_60046ed96586b",
+            "label": "Year",
+            "name": "year",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:reviews"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619991525
+}

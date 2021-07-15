@@ -8429,14 +8429,14 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   color: silver;
-  padding: 75px 0;
-  margin-top: 30px; }
+  padding: 75px 0; }
 
 .hero-with-featured-review {
-  background-color: #1d1d1d; }
+  background-color: #1d1d1d;
+  max-width: 1920px; }
   @media (min-width: 992px) {
     .hero-with-featured-review {
-      padding: 0 50px 0 0; } }
+      padding: 0; } }
   .hero-with-featured-review h1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8451,7 +8451,12 @@ footer {
     font-style: italic;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    margin: 0; }
+    @media (max-width: 991.98px) {
+      .hero-with-featured-review h1 {
+        font-size: 1.3rem;
+        text-align: center; } }
   .hero-with-featured-review .featured-image {
     padding-left: 0;
     padding-right: 0; }
@@ -8461,12 +8466,28 @@ footer {
       max-height: 325px;
       -o-object-fit: cover;
          object-fit: cover; }
+    .hero-with-featured-review .featured-image:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 25%;
+      background-color: rgba(16, 16, 16, 0);
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(16, 16, 16, 0)), to(#101010));
+      background: linear-gradient(0deg, rgba(16, 16, 16, 0) 0, #101010);
+      z-index: 1; }
     .hero-with-featured-review .featured-image:after {
       content: '';
-      display: block;
-      background-color: black;
-      padding-top: 50px;
-      margin-top: -2px; }
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgba(16, 16, 16, 0);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(16, 16, 16, 0)), to(#101010));
+      background: linear-gradient(180deg, rgba(16, 16, 16, 0) 0, #101010);
+      z-index: 1; }
     .hero-with-featured-review .featured-image .text {
       width: 100%;
       position: absolute;
@@ -8482,14 +8503,17 @@ footer {
           -ms-flex-align: center;
               align-items: center;
       text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.8);
-      z-index: 1; }
-      .hero-with-featured-review .featured-image .text h3 {
+      z-index: 2; }
+      .hero-with-featured-review .featured-image .text a {
         color: #ffffff;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 3rem;
         letter-spacing: 1px;
         margin-bottom: 5px; }
+        @media (max-width: 991.98px) {
+          .hero-with-featured-review .featured-image .text a {
+            font-size: 32px; } }
       .hero-with-featured-review .featured-image .text i {
         color: gold;
         font-size: 2rem;
